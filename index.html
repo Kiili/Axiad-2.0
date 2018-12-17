@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Axiad</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src= table.js> </script> 
+    <script src= HTMLfunctions.js> </script> 
+    <script src= https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js> </script> 
+    <script src="sketch.js"></script>
+    
+
+  </head>
+
+  <body onload="loadPrices(); draw();">
+
+    <form method="POST">
+      <table>
+        <tr>
+          <th>Stock name</th>
+          <th>Quantity</th>
+          <th>Bought for</th>
+        </tr>
+        <tr>
+          <td><input type="text" name="name"/></td>
+          <td><input type="text" name="qty"/></td>
+          <td><input type="text" name="price"/></td>
+          <td><input type="submit" value="add" ></td>
+        </tr>
+
+      </table>
+    </form>
+
+    <button type="button" onclick="refreshPrices()">Refresh prices</button>
+
+    <div id="table"></div>
+
+  </body>
+</html>

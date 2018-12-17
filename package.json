@@ -1,0 +1,16 @@
+{
+  "name": "axiad-2.0",
+  "version": "1.0.0",
+  "description": "Axiad",
+  "main": "Main.js",
+  "scripts": {
+    "test": "console.log(\"test\")"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "node-fetch": "^2.3.0"
+  }
+}
