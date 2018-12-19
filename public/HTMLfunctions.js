@@ -10,9 +10,12 @@ function loadPrices() {
                 setTimeout(loadPrices, 2000);
             }
 
-            //data[index][stockname(0),qty(1),boughtFor(2),prices(3)][priceindex][date(0), price(1)]
-            //console.log(data)
-            table(data);
+            //console.log("Getting data");
+            //console.log("Got " + data);
+
+            //if data is retrieved, then
+            table(data); //make table
+            drawGraphs(); //draw graphs
 
         }
     };
@@ -36,7 +39,6 @@ function removeCell(row) {
 function refreshPrices(){ //reset all prices to not_loaded
     var xhttp = new XMLHttpRequest();
     xhttp.open("POST", "http://localhost:8080/refresh", true);
-    console.log("Sent");
     
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -52,5 +54,9 @@ function refresh(){ //check for unloaded prices
             return true;
         }
     }
+}
+
+function getUserData(){
+    return data;
 }
 

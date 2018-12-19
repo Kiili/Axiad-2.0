@@ -2,18 +2,18 @@
 <html>
 
   <head>
+
     <title>Axiad</title>
 
     <link rel="stylesheet" href="styles.css">
-    <script src= table.js> </script> 
-    <script src= HTMLfunctions.js> </script> 
-    <script src= https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js> </script> 
+    <script src= table.js></script> 
+    <script src= HTMLfunctions.js></script> 
+    <script src= https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js></script> 
     <script src="sketch.js"></script>
     
-
   </head>
 
-  <body onload="loadPrices(); draw();">
+  <body onload="loadPrices(); //load prices and draw graphs&stuff">
 
     <form method="POST">
       <table>
@@ -32,9 +32,11 @@
       </table>
     </form>
 
+    <!--sets all prices to "not_loaded"-->
     <button type="button" onclick="refreshPrices()">Refresh prices</button>
 
     <div id="table"></div>
 
   </body>
+
 </html>
